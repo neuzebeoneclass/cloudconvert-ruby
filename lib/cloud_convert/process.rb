@@ -42,7 +42,7 @@ module CloudConvert
     def convert(opts)
         raise CloudConvert::InvalidStep if @step == :awaiting_creation
         url = process_url()
-        if opts[:file].response_to?("read")
+        if opts[:file].respond_to?("read")
           file_to_upload = opts[:file]
           opts.delete(:file)
         end
@@ -62,7 +62,7 @@ module CloudConvert
                          },
                          multi: true)
           end
-          
+
         end
         return convert_response response
     end

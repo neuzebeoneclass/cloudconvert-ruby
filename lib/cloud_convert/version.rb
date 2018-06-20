@@ -2,7 +2,7 @@ module CloudConvert
   module VERSION_VALUES #:nodoc:
       MAJOR    = '0'
       MINOR    = '1'
-      TINY     = '9'
+      TINY     = '10'
       BETA     = nil # Time.now.to_i.to_s
     end
 
